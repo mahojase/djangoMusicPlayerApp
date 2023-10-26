@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="left">
+
+            <div class="container">
+                <div class="music-player">
+                    <div class="cover">
+                        <img class="music_img" src="" alt="">
+                    </div>
+                    <div class="titre">
+                        <h3 class="artist">Kygo</h3>
+                        <h1 class="song-title">Stole the show</h1>
+                    </div>
+
+                    <div class="progressbar_container">
+                        <div class="progress_duration_meter">
+                            <div id="current_time">0:00</div>
+                            <div id="duration">0:00</div>
+                        </div>
+                        <div class="progress_div">
+                            <div class="progress">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="music_controls">
+                        <i class="fas fa-backward" id="prev" title="Previous"></i>
+                        <i class="fas fa-play main_button" id="play" title="Play"></i>
+                        <i class="fas fa-forward" id="next" title="Next"></i>
+                    </div>
+
+
+                    <div class="lecteur">
+                        <audio class="audio-player" src=""></audio>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="right">
+            <div class="playlist-heading">
+                <div class="playlist-title">
+                    <i class="fas fa-bars"></i>
+                    <h1>Playlist</h1>
+                </div>
+                <img draggable="false" class="playlist-icon" src="/static/images/playlist.png" alt="">
+            </div>
+
+            <div class="music">
+                {% for music in musics %}
+                <div class="song">
+                    <div class="info">
+                        <div class="song-thumbnail"><img src="/media/{{music.cover_image}}" alt=""></div>
+                        <div class="titles">
+                            <h4 id="title{{forloop.counter0}}">{{music.title}}</h4>
+                            <p id="artist{{forloop.counter0}}">{{music.artist}}</p>
+                        </div>
+                    </div>
+                    <div class="state playing">
+                        <i id="{{ forloop.counter0 }}" onclick="getsong(this)" class="fas fa-play play-button"></i>
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+    <a class="add-button" href="/add"><i class="fas fa-plus"></i></a>
+
+    {{music_list | json_script:'musics'}}
+
+    <script src="{% static 'home.js' %}"></script>
+
+
+</body>
+
+</html>

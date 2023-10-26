@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="{% static 'add.css' %}">
+</head>
+
+<body>
+
+    <form class="form" action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-title">Add Your Favourite Music !!!</div>
+        <div class="input-container ic1">
+            <input name="title" maxlength="500" required="" class="input" type="text" placeholder="Title"
+                spellcheck="false" />
+        </div>
+        <div class="input-container ic2">
+            <input name="artist" maxlength="500" required="" class="input" type="text" placeholder="Artist"
+                spellcheck="false" />
+        </div>
+
+        <div class="upload-files">
+            <div class="file-input-container">
+                <input type="file" accept="audio/mp3" name="audio_file" required="" class="sm-input-file"
+                    id="sm-ip-1" />
+                <label class="for-sm-input-file" for="sm-ip-1">Add Song</label>
+                <span class="span-text" id="file-name1"></span>
+            </div>
+
+            <div class="file-input-container">
+                <input type="file" accept="image/*" name="cover_image" required="" class="sm-input-file" id="sm-ip-2" />
+                <label class="for-sm-input-file" for="sm-ip-2">Add Image</label>
+                <span class="span-text" id="file-name2"></span>
+            </div>
+        </div>
+        <input type="submit" class="submit-btn" value="Submit" />
+    </form>
+    <a class="add-button" href="/"><i class="fas fa-home"></i></a>
+
+    <script src="/static/add.js"></script>
+</body>
+
+</html>
