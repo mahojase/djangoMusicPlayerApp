@@ -1,5 +1,5 @@
 # Building a Music Player App with Django
-django Music App
+Python Django Music Player App
 
 In today's digital age, music has become an integral part of our lives. With the rise of streaming services, accessing music has become easier than ever. However, sometimes you might want to have more control over your music library and playback experience. That's where building your own music player app can come in handy. In this tutorial, we'll walk through the process of creating a music player web application using Django, a high-level Python web framework.
 
