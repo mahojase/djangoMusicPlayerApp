@@ -6,6 +6,6 @@ from .import views
 app_name="stream"
 
 urlpatterns=[
-    path('home/',views.index,name='home'),
+    path('',views.index,name=''),
     path('add/',views.add, name='add')
 ]
