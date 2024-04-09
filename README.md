@@ -71,9 +71,13 @@ If you're interested in further enhancing your web development skills, don't mis
 
 Python courses:
 https://www.mjit.in/course/Python-Full-stack
+
 https://www.mjit.in/course/Automation-Using-Python
+
 https://www.mjit.in/course/Advanced-Python
+
 https://www.mjit.in/course/Python-Boot-Camp-Training
+
 https://www.mjit.in/course/Python-Django-Web-Development-with-Basics
 
 Additionally, if you're interested in staying updated with upcoming events, workshops, or webinars related to Python, Django, or web development in general, make sure to visit our events page https://www.mjit.in/events.
