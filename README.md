@@ -14,43 +14,53 @@ Django framework
 Basic understanding of HTML, CSS, and JavaScript
 
 **Setting Up Your Django Project**
-Install Django: If you haven't installed Django yet, you can do so using pip:
+
+**Install Django**: If you haven't installed Django yet, you can do so using pip:
 
 **pip install django**
 
-Create a Django Project: Start by creating a new Django project:
+**Create a Django Project**: Start by creating a new Django project:
 
 **django-admin startproject Musicplayer**
 
-Create a Django App: Within your project directory, create a new Django app for our music player:
+**Create a Django App:** Within your project directory, create a new Django app for our music player:
 
-**cd Musicplayer
-django-admin startapp stream**
+**cd Musicplayer**
 
-Building the Music Player
+**django-admin startapp stream**
+
+**Building the Music Player**
+
 Now that we have our project structure set up, let's start building our music player app.
 
-Models
+**Models**
+
 In our player app directory, define models to represent our music data.
 
 Don't forget to run migrations after defining your models:
 
-**python manage.py makemigrations
-python manage.py migrate**
+**python manage.py makemigrations**
 
-Views and Templates
+**python manage.py migrate**
+
+**Views and Templates**
+
 Create views and templates to handle the user interface and interaction.
 
-URL Configuration
+**URL Configuration**
+
 Define URL patterns in your player app's urls.py file to map views to URLs.
 
-Static Files
+**Static Files**
+
 Organize your static files (CSS, JavaScript) and media files (song files, cover arts) properly.
 
-Integrating Music Player
+**Integrating Music Player**
+
 You can use HTML5 audio player or integrate third-party JavaScript libraries like Plyr.js for a better playback experience.
 
-Conclusion
+**Conclusion**
+
 Congratulations! You've just built a basic music player app using Django. From here, you can further enhance your app by adding features like user authentication, playlists, search functionality, and more. The possibilities are endless!
 
 Feel free to explore Django's documentation and the vast ecosystem of Django packages to expand the capabilities of your music player app.
